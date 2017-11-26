@@ -24,12 +24,6 @@ class Testwinningticket < Minitest::Test
 		assert_equal(true, ticket_search(winners, my_ticket))
 	end
 
-	def test_assert_that_is_a_loser
-		winners = [1234, 4567, 6789]
-		my_ticket = 5628
-		assert_equal(false, ticket_search(winners, my_ticket))
-	end
-
 	def test_assert_that_is_a_array_for_so_close_number
 		so_close = [1134, 4557, 6889]
 		my_ticket = 1234

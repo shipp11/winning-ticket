@@ -21,19 +21,19 @@ class Testwinningticket < Minitest::Test
 	def test_assert_that_my_ticket_is_in_winners_array
 		winners = [1234, 4567, 6789]
 		my_ticket = 1234
-		assert_equal(true, ticket_search(winners, my_ticket))
+		assert_equal("winner", ticket_search(winners, my_ticket))
 	end
 
 	def test_assert_that_is_a_array_for_so_close_number
 		so_close = [1134, 4557, 6889]
-		my_ticket = 1234
-		assert_equal(false, ticket_search(so_close, my_ticket))
+		my_ticket = 2134
+		assert_equal("so close", ticket_search(so_close, my_ticket))
 	end
 
 	def test_assert_that_is_a_array_for_losing_number
 		losing_number = [4321, 7654, 9876]
 		my_ticket = 1234
-		assert_equal(false, ticket_search(losing_number, my_ticket))
+		assert_equal("loser", ticket_search(losing_number, my_ticket))
 	end
 
 end
